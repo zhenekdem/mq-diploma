@@ -43,82 +43,86 @@
         </div>
     </header>
 
-    <div class="pop-up-container _hidden">
-        <form class="pop-up-contant">
-            <button class="popup_close" type="button"></button>
+    <div class="pop-up-container_hidden">
+        <div class="popup">
+           <div class="popup_content">
+            <label for="popup" class="popup_close"><img class="popup-svg" src="file:///C:/Users/HONOR/Desktop/mq-diplom/svg/form-x.svg" alt="крестик"></label>
             <h2 class="header-popup">ваш фидбек</h2>
-            <div class="statistics">
-                <label for="selection-statistics" class="question">Как часто вы заходите на сайт?</label>
+            <form class="statistics">
+                <label class="select-gtoup">
+                <span class="question">Как часто вы заходите на сайт?</span>
                 <select class="choose-option">
                     <option class="option" selected>Почти каждый день</option>
-                    <option class="option">раз в неделю</option>
-                    <option class="option">раз в месяц</option>
+                    <option class="option">раз в несколько дней</option>
+                    <option class="option">раз в несколько недель</option>
+                    <option class="option">раз в год</option>
                 </select>
-            </div>
-            <div class="row-email">
+                <img class="form-arrows" src="file:///C:/Users/HONOR/Desktop/mq-diplom/svg/form-arrows.svg" alt="form-arrows">
+                </label> 
                 <span class="question">Вы подписаны на e-mail рассылку?</span>
-                <label class="choose">
-                    <input type="radio" name="radio-group" class="radio-check radio-1" checked>
+              <div class="radio-box">
+                <label class="checkbox-group">
+                    <input type="radio" name="answer" class="checkbox">
+                    <img class="radio-svg checked" src="file:///C:/Users/HONOR/Desktop/mq-diplom/svg/form-circle.svg" alt="circle">
                     <span class="radio-text">Да</span>
                 </label>
-                <label class="choose">
-                    <input type="radio" name="radio-group" class="radio-check radio-2">
+                <label class="checkbox-group">
+                    <input type="radio" name="answer" class="checkbox">
+                    <img class="radio-svg empty" src="file:///C:/Users/HONOR/Desktop/mq-diplom/svg/form-empty-circle.svg" alt="circle">
                     <span class="radio-text">Нет</span>
                 </label>
-            </div>
-            <div class="preferences">
+              </div>
+               <label class="field-group">
                 <span class="question">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</span>
                 <textarea class="field" placeholder="Может, больше рецептов?"></textarea>
-            </div>
-            <button class="popup-button">отправить</button>
-        </form>
+               </label>
+               <button class="button-form" type="reset">Отправить</button>
+            </form>
+           </div>
+        </div>
     </div>
 
     <div class="trends-content">
         <div class="trends">
-            <h2 class="trends-header">Сейчас в тренде</h2>
             <div class="trends-gallery">
-                <article class="trend-article">
-                    <div class="trend-container trand-1">
-                        <div class="trend-content">
+                <h2 class="trends-header text">Сейчас в тренде</h2>
+            </div>
+                <div class="trend-container">
+                    <div class="trend-content trand-1">
+                        <article class="title-content">
                             <ul class="category">
                                 <li class="category-link"><a href="#" class="category-item">lifestyle</a></li>
                                 <li class="category-link"><a href="#" class="category-item">interior</a></li>
                             </ul>
                             <h2 class="trend-name"><a href="" class="trend-link">сейчас в тренде: сад на подоконнике</a>
                             </h2>
-                        </div>
+                        </article>
                     </div>
-                </article>
+                
 
-                <aticle class="trend-article">
-                    <div class="trend-container trand-2">
-                        <div class="trend-content">
+                    <div class="trend-content trand-2">
+                        <article class="title-content">
                             <ul class="category">
                                 <li class="category-link"><a href="#" class="category-item">food</a></li>
                             </ul>
                             <h2 class="trend-name"><a href="" class="trend-link">сыры на красивых картинках из
                                     интернета: какие они на вкус?</a></h2>
-                        </div>
+                        </article>
                     </div>
-                </aticle>
 
-                <article class="trend-article">
-                    <div class="trend-container trand-3">
-                        <div class="trend-content">
+                    <div class="trend-content trand-3">
+                        <article class="title-content">
                             <ul class="category">
                                 <li class="category-link"><a href="#" class="category-item">lifestyle</a></li>
                                 <li class="category-link"><a href="#" class="category-item">travel</a></li>
                             </ul>
                             <h2 class="trend-name"><a href="" class="trend-link">собираемся в первый поход в горы</a>
                             </h2>
-                        </div>
+                        </article>
                     </div>
-                </article>
 
-                <article class="trend-article">
-                    <div class="trend-container trand-4">
-                        <div class="trend-content">
+                    <div class="trend-content trand-4">
+                        <article class="title-content">
                             <ul class="category">
                                 <li class="category-link"><a href="#" class="category-item">food</a></li>
                                 <li class="category-link"><a href="#" class="category-item">health</a></li>
@@ -126,10 +130,9 @@
                             <h2 class="trend-name"><a href="" class="trend-link">сейчас в тренде: сколько витамина c в
                                     лимонах?</a>
                             </h2>
-                        </div>
+                        </article>
                     </div>
-                </article>
-            </div>
+                </div>
         </div>
     </div>
 
@@ -471,7 +474,9 @@
     </div>
 
     <section class="shop">
-        <h2 class="products">наши изделия</h2>
+        <div class="trends-gallery">
+        <h2 class="trends-header text">наши изделия</h2>
+        </div>
         <div class="shop-conteiner">
             <div class="product-item-card">
                 <picture>
@@ -482,8 +487,8 @@
                     <img class="product-img" src="images/shop-item-desk1.jpg" alt="подушки">
                 </picture>
                 <div class="product-body">
-                    <h2 class="product-name">подушки на диван</h2>
-                    <p class="product-discription">набор из двух подушек с модными принтами. Видео о создании<a href=""
+                    <h2 class="trends-header">подушки на диван</h2>
+                    <p class="product-discription">Набор из двух подушек с модными принтами. Видео о создании <a href=""
                             class="product-link">здесь</a>.
                     </p>
                     <div class="about-price">
@@ -504,7 +509,7 @@
                     <img class="product-img" src="images/shop-item-desk2.jpg" alt="кукла зайчик">
                 </picture>
                 <div class="product-body">
-                    <h2 class="product-name">кукла "зайчик"</h2>
+                    <h2 class="trends-header">кукла "зайчик"</h2>
                     <p class="product-discription">Интерьерная рукодельная кукла "Зайчик", созданию которой посвящена <a
                             href="" class="product-link">весенняя серия постов</a> в блоге и несколько подкастов.
                     </p>
@@ -525,7 +530,7 @@
                     <img class="product-img" src="images/shop-item-desk3.jpg" alt="шестиугольная рамка">
                 </picture>
                 <div class="product-body">
-                    <h2 class="product-name">шестиугольная рамка</h2>
+                    <h2 class="trends-header">шестиугольная рамка</h2>
                     <p class="product-discription">Необычная рамка для украшения дома из видео <a href=""
                             class="product-link">"Как сделать рамку из подручных средств за 30 минут"</a>
                     </p>
