@@ -48,6 +48,10 @@ body {
   justify-content: space-between;
 }
 
+.hamburgers {
+  display: none;
+}
+
 .menu-list {
   display: flex;
   color: #ffffff;
@@ -107,32 +111,21 @@ body {
   justify-content: center;
   align-items: center;
   position: fixed;
-  background: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.5);
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
-  z-index: 3;
-  width: 100%;
-  height: 100%;
+  z-index: 2;
 }
-
 
 .popup {
   background-color: #fff;
-  position: absolute;
+  position: relative;
   margin-left: 633px;
   text-align: center;
   margin-top: 218px;
-  width: 100%;
-  max-width: 390px;
-  z-index: 3;
-}
-
-.popup_content {
-  position: relative;
   width: 390px; 
-  height: 590px;
   box-sizing: border-box;
   padding: 54px 30px;
 }
@@ -781,4 +774,157 @@ new:not(first-of-type) {
   color: #999999;
   font-weight: 700;
   text-align: center
+}
+
+@media (min-width: 641px) and (max-width: 1200px) {
+  .header-menu {
+    display: none;
+  }
+
+  .wrapper {
+    width: 100%;
+  }
+
+  .header {
+    background-image: url(../images/banner-bg-tablet.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .hamburgers {
+    display: block;
+    cursor: pointer;
+  }
+
+  .trend-container {
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .trend-content {
+    width: calc(50% - 4px);
+    margin: 4px 0;
+  }
+
+  .content {
+    padding: 45px 34px;
+  }
+
+  .main {
+    max-width: 70%;
+  }
+
+  .news {
+    margin-right: 34px;
+    flex-direction: column;
+    margin-bottom: 40px;
+    border-bottom: solid 4px #eeeeee;
+  }
+
+  .news-tag {
+    margin: 15px 0 17px 0;
+  }
+
+  .news-text {
+    margin-left: 0;
+  }
+
+  .news-link {
+    line-height: 22px;
+  }
+
+  .news-text-meta {
+    margin-bottom: 36px;
+  }
+
+  .about {
+    margin-bottom: 15px;
+  }
+
+  .aside {
+    width: 272px;
+    margin-right: 35px;
+  }
+
+  .news-text {
+    margin-top: 0;
+    margin-left: 10px;
+  }
+
+  .shop-conteiner {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 57px;
+    margin-right: 57px;
+    justify-content: space-between;
+  }
+
+  .product-item-card {
+    width: calc(50% - 34px);
+
+  }
+
+  .footer {
+   width: 697px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1200px) and (orientation: landscape) {
+ .wrapper {
+  max-width: 1200px;
+ } 
+
+ .header-menu {
+   display: none;
+ }
+.hamburgers {
+  display: block;
+  cursor: pointer;
+}
+
+.content {
+  padding: 45px 34px;
+}
+}
+
+@media (max-width: 640px) {
+ .header {
+  background-image: url(../images/banner-mobile.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+ }
+
+ .header-menu {
+  display: none;
+ }
+
+ .wrapper {
+  flex-direction: column;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+  position: relative;
+ }
+
+ .hamburgers {
+  display: block;
+  cursor: pointer;
+  
+}
+
+.logo-link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.welcome-title {
+  font-size: 26px;
+  line-height: 36px;
+  width: 280px;
+}
 }
