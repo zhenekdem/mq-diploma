@@ -106,7 +106,7 @@ body {
   margin: auto;
 }
 
-.pop-up-container {
+.pop-up-container_hidden {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -116,13 +116,13 @@ body {
   right: 0;
   left: 0;
   bottom: 0;
-  z-index: 2;
+  z-index: 3;
+  
 }
 
 .popup {
   background-color: #fff;
   position: relative;
-  margin-left: 633px;
   text-align: center;
   margin-top: 218px;
   width: 390px; 
@@ -133,7 +133,7 @@ body {
 .popup__close {
   position: absolute;
   color: #fff;
-  top: 8px;
+  top: 1em;
   cursor: pointer;
 }
 
@@ -208,7 +208,6 @@ body {
 
 .radio-box {
   display: flex;
-
 }
 
 .checkbox-group {
@@ -270,8 +269,8 @@ body {
 
 .trends {
   width: 100%;
-
 }
+
 .trends-gallery {
   display: flex;
   align-items: center;
@@ -284,6 +283,7 @@ body {
  text-transform: uppercase;
  font-size: 20px;
  font-weight: bold;
+ line-height: 24px;
 }
 
 .text::after {
@@ -303,15 +303,17 @@ body {
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
+  gap: 4px;
 }
 
 .trend-content {
   display: flex;
   justify-content: center;
-  width: calc(100%/4 - 3px);
+  width: 25%;
   position: relative;
   min-height: 315px;
   align-items: flex-end;
+  
 }
 
 .trend-content::before {
@@ -324,7 +326,6 @@ body {
   right: 0;
   top: 0;
   bottom: 0;
-  z-index: 1;
 }
 
 .trand-1 {
@@ -357,8 +358,8 @@ body {
 
 .title-content {
   border:  3px solid #b59f5b;
-  margin: auto 20px 18px;
-  padding: 42px 100px 35px 36px;
+  margin: auto 20px 15px;
+  padding: 39px 45px 37px 33px;
   max-height: 180px;
   position: absolute;
 }
@@ -373,7 +374,8 @@ body {
   font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
-  
+  line-height: 40px;
+  margin-bottom: 15px;
 }
 
 .trend-name {
@@ -382,6 +384,7 @@ body {
   font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
+  line-height: 24px;
 }
 
 .news {
@@ -661,39 +664,53 @@ new:not(first-of-type) {
 .shop {
   width: 1200px;
   margin-top: 57px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
 }
 
 .shop-conteiner {
   display: flex;
-
+  margin-left: 20px;
 }
 
 .product-item-card {
-  width: 33.33%;
+  width: 300px;
   display: flex;
   flex-direction: column;
+  padding: 20px;
+}
 
+.product-item-card:nth-child(n+2) {
+  margin-left: 66px;
 }
 
 .picture {
-  width: 320px;
   background-color: gray;
   display: block;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
 .product-body {
-  display: flex;
-  outline: 3px solid #d3c59d;
-  flex-direction: column;
-  outline-offset: 20px;
+  position: relative;
+}
+
+.product-body::before {
+  content: "";
+  position: absolute;
+  border: 3px solid #d3c59d;
+  left: -20px;
+  right: -20px;
+  top: -20px;
+  bottom: -20px;
 }
 
 .product-discription {
   font-size: 15px;
   width: 300px;
+}
+
+.card {
+  margin-top: 12px;
 }
 
 .product-link {
